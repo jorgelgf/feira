@@ -30,8 +30,11 @@ export default function App() {
     setState("");
   };
 
-  const handleDelete = () => {
-    alert();
+  const handleDelete = (item) => {
+    let filterList = list.filter((tarefa) => {
+      return tarefa.item !== item;
+    });
+    setList(filterList);
   };
 
   return (
